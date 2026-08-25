@@ -420,9 +420,7 @@ h2.headline .grad-purple {
 }
 
 .whatsapp-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -431,7 +429,6 @@ h2.headline .grad-purple {
   align-items: center;
   justify-content: center;
   box-shadow: 0 12px 28px rgba(15, 157, 106, 0.4);
-  z-index: 10;
   text-decoration: none;
   transition: 0.2s;
 }
@@ -444,6 +441,57 @@ h2.headline .grad-purple {
   width: 28px;
   height: 28px;
   object-fit: contain;
+}
+
+.whatsapp-wrap {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.whatsapp-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  pointer-events: none;
+  transform-origin: bottom right;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.whatsapp-menu.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.whatsapp-menu-item {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #12281f;
+  background: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(15, 157, 106, 0.25);
+  transition: 0.15s;
+}
+
+.whatsapp-menu-item:hover,
+.whatsapp-menu-item:focus-visible {
+  background: #0f9d6a;
+  color: #ffffff;
+  transform: translateX(-2px);
 }
 
 /* ===== PRICE MENU ===== */
@@ -602,7 +650,56 @@ h2.headline .grad-purple {
   margin-bottom: 18px;
 }
 
-/* card grid (services + reviews) */
+/* branch video showcase (About section: text + video, alternating sides) */
+.branch-showcase {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.branch-showcase-reverse {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.branch-showcase-reverse .branch-showcase-media {
+  order: 1;
+}
+
+.branch-showcase-reverse .branch-showcase-text {
+  order: 2;
+}
+
+.branch-showcase-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.branch-showcase-desc {
+  margin-bottom: 0;
+}
+
+.branch-showcase-media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  min-height: 260px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(80, 40, 140, 0.15);
+  background: linear-gradient(135deg, #f3e8fd, #fce7f3);
+}
+
+.branch-showcase-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* card grid (services) */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -624,6 +721,100 @@ h2.headline .grad-purple {
 .review-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(80, 40, 140, 0.1);
+}
+
+/* ----- Reviews: left-to-right auto-scrolling loop ----- */
+/* ----- Reviews: left-to-right auto-scrolling loop ----- */
+
+.reviews-marquee {
+  margin-top: 24px;
+  overflow: hidden;
+
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+/* Container for the two review rows */
+.reviews-rows {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px; /* GAP BETWEEN UPPER AND LOWER ROW */
+}
+
+/* Each scrolling row */
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+
+  animation: reviews-scroll 72s linear infinite;
+}
+
+/* Pause when mouse is over reviews */
+.reviews-marquee:hover .reviews-track,
+.reviews-marquee:focus-within .reviews-track {
+  animation-play-state: paused;
+}
+
+@keyframes reviews-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.reviews-marquee .review-card {
+  flex: 0 0 300px;
+  width: 300px;
+  position: relative;
+}
+
+.review-location {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-track {
+    animation: none;
+  }
+  .reviews-marquee {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-marquee .review-card {
+    flex-basis: 260px;
+    width: 260px;
+  }
+  .reviews-track {
+    animation-duration: 34s;
+    gap: 16px;
+  }
 }
 
 .feature-icon {
@@ -968,8 +1159,21 @@ h2.headline .grad-purple {
     grid-template-columns: 1fr;
   }
   .about-photo {
-    order: -1;
     min-height: 220px;
+  }
+  .branch-showcase,
+  .branch-showcase-reverse {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+  .branch-showcase-media,
+  .branch-showcase-reverse .branch-showcase-media {
+    order: 1;
+    min-height: 220px;
+  }
+  .branch-showcase-text,
+  .branch-showcase-reverse .branch-showcase-text {
+    order: 0;
   }
   .enquiry-form {
     grid-template-columns: 1fr;

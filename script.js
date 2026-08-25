@@ -3,7 +3,23 @@
   'use strict';
 
   // Replace with the salon's real WhatsApp number (country code, no + or spaces)
-  const WHATSAPP_NUMBER = '919876543210';
+  // Used as the fallback when no branch/location is selected (e.g. price-row taps, float button).
+  const WHATSAPP_NUMBER = '919645499717';
+
+  // Replace each value with that branch's real WhatsApp number (country code, no + or spaces).
+  const LOCATION_WHATSAPP_NUMBERS = {
+    'Changanassery': '919645499717',
+    'Kottayam': '919497420444'
+  };
+
+  /**
+   * Resolve the WhatsApp number for a given branch/location name.
+   * Falls back to the default salon number if the location isn't recognized.
+   * @param {string} location
+   */
+  function getWhatsAppNumberForLocation(location) {
+    return LOCATION_WHATSAPP_NUMBERS[location] || WHATSAPP_NUMBER;
+  }
 
   const navLinks = document.querySelectorAll('nav a');
   const header = document.querySelector('header');
@@ -46,9 +62,11 @@
   /**
    * Open WhatsApp (app on mobile, web.whatsapp.com on desktop) with a pre-filled message.
    * @param {string} message
+   * @param {string} [number] - WhatsApp number to message; defaults to the general salon number.
    */
-  function openWhatsApp(message) {
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  function openWhatsApp(message, number) {
+    const target = number || WHATSAPP_NUMBER;
+    const url = `https://wa.me/${target}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener');
   }
 
@@ -151,8 +169,59 @@
     }
   });
 
-  // --- 4. WhatsApp float button -> opens a chat with a general enquiry ---
-  if (whatsappBtn) {
+  // --- 4. WhatsApp float button -> opens a small branch-picker menu ---
+  const whatsappMenu = document.getElementById('whatsappMenu');
+
+  function closeWhatsAppMenu() {
+    if (!whatsappMenu) return;
+    whatsappMenu.classList.remove('is-open');
+    whatsappMenu.setAttribute('aria-hidden', 'true');
+    if (whatsappBtn) whatsappBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function openWhatsAppMenu() {
+    if (!whatsappMenu) return;
+    whatsappMenu.classList.add('is-open');
+    whatsappMenu.setAttribute('aria-hidden', 'false');
+    if (whatsappBtn) whatsappBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  if (whatsappBtn && whatsappMenu) {
+    whatsappBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = whatsappMenu.classList.contains('is-open');
+      if (isOpen) {
+        closeWhatsAppMenu();
+      } else {
+        openWhatsAppMenu();
+      }
+    });
+
+    whatsappMenu.querySelectorAll('.whatsapp-menu-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const location = this.dataset.location;
+        openWhatsApp(
+          `Hi Amigos! I'd like to know more about your services at the ${location} branch.`,
+          getWhatsAppNumberForLocation(location)
+        );
+        closeWhatsAppMenu();
+      });
+    });
+
+    // Close when clicking anywhere else on the page
+    document.addEventListener('click', function(e) {
+      if (!whatsappMenu.classList.contains('is-open')) return;
+      if (whatsappMenu.contains(e.target) || whatsappBtn.contains(e.target)) return;
+      closeWhatsAppMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeWhatsAppMenu();
+    });
+  } else if (whatsappBtn) {
+    // Fallback if the menu markup isn't present for some reason
     whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
       openWhatsApp("Hi Amigos! I'd like to know more about your services.");
@@ -203,11 +272,12 @@
       const name = enquiryForm.name.value.trim();
       const phone = enquiryForm.phone.value.trim();
       const service = enquiryForm.service.value;
+      const location = enquiryForm.location.value;
       const date = enquiryForm.date.value;
       const time = enquiryForm.time.value;
       const notes = enquiryForm.notes.value.trim();
 
-      if (!name || !phone || !service) {
+      if (!name || !phone || !service || !location) {
         enquiryForm.reportValidity();
         return;
       }
@@ -224,12 +294,13 @@
       let message = `Hi Amigos! I'd like to send an enquiry.\n\n`;
       message += `Name: ${name}\n`;
       message += `Phone: ${phone}\n`;
+      message += `Branch: ${location}\n`;
       message += `Service: ${service}\n`;
       if (date) message += `Preferred Date: ${date}\n`;
       if (time) message += `Preferred Time: ${formatTimeTo12Hour(time)}\n`;
       if (notes) message += `Notes: ${notes}\n`;
 
-      openWhatsApp(message);
+      openWhatsApp(message, getWhatsAppNumberForLocation(location));
     });
   }
 
