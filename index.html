@@ -2,24 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="Amigos salon content="Amigos Salon & Academy">
-  <meta name="google-site-verification" content="SriNgKbuyFiKbM_Jl-fSnvlpUtjiMKjp6ne4gdqlKYI" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+  <!-- PRIMARY TITLE -->
+  <title>Best Salon in Changanassery | Amigos Unisex Salon & Academy | Bridal Makeup, Hair & Beauty</title>
+
+  <!-- META DESCRIPTION & KEYWORDS -->
+  <meta name="description" content="Amigos is the best unisex salon in Changanassery offering bridal makeup, haircuts, facials, keratin treatments & more. Book your appointment today!">
+  <meta name="keywords" content="best salon in Changanassery, beauty parlour Changanassery, unisex salon Changanassery, bridal makeup Changanassery, haircut Changanassery, facial Changanassery, keratin treatment Changanassery, Amigos salon">
+
+  <!-- GOOGLE VERIFICATION -->
+  <meta name="google-site-verification" content="SriNgKbuyFiKbM_Jl-fSnvlpUtjiMKjp6ne4gdqlKYI" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Best Salon in Changanassery | Amigos Unisex Salon & Academy">
+  <meta property="og:description" content="Premium bridal makeup, haircuts, facials & keratin treatments in Changanassery. 16+ years of artistry. Book now!">
   <meta property="og:site_name" content="Amigos Salon & Academy">
   <meta property="og:image" content="https://amigosalon.netlify.app/assets/favicon-180.png">
-  <meta property="twitter:image" content="https://amigosalon.netlify.app/assets/favicon-180.png">
-  <title>Amigos · Unisex Salon & Academy</title>
-  <script>
-    document.querySelectorAll('meta[name="hosting-provider"], meta[name="netlify-deploy"]').forEach(el => el.remove());
-  </script>
+  <meta property="og:url" content="https://amigosalon.netlify.app/">
+  <meta property="og:type" content="website">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best Salon in Changanassery | Amigos Unisex Salon & Academy">
+  <meta name="twitter:description" content="Premium bridal makeup, haircuts, facials & keratin treatments in Changanassery. 16+ years of artistry.">
+  <meta name="twitter:image" content="https://amigosalon.netlify.app/assets/favicon-180.png">
+
+  <!-- CANONICAL URL -->
+  <link rel="canonical" href="https://amigosalon.netlify.app/">
+
+  <!-- FAVICONS -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/favicon-180.png">
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- STYLESHEET -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Strip Netlify's auto-injected meta tags -->
+  <script>
+    document.querySelectorAll('meta[name="hosting-provider"], meta[name="netlify-deploy"]').forEach(el => el.remove());
+  </script>
+
+  <!-- SCHEMA MARKUP -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,7 +120,6 @@
   <!-- ENQUIRE NOW – right (mobile only) -->
   <button class="book-btn enquire-btn" id="bookApptBtn2">
     ENQUIRE NOW
-    
   </button>
 </header>
 
@@ -143,13 +172,13 @@
   <!-- right column with image + banner -->
   <div class="right-col">
     <div class="photo-card">
-      <img src="assets/studio.jpeg" alt="Salon interior">
+      <img src="assets/studio.jpeg" alt="Premium salon interior at Amigos unisex salon in Changanassery Kerala">
     </div>
 
     <!-- Amigos banner -->
     <div class="logo-card">
       <div class="brand-mark">
-        <img src="assets/ban.png" alt="Amigos logo">
+        <img src="assets/ban.png" alt="Amigos logo - best salon in Changanassery for bridal makeup and haircuts">
       </div>
     </div>
   </div>
@@ -173,6 +202,13 @@
     <div class="price-menu-intro">
       <h3 class="price-menu-heading">Price Menu</h3>
       <p class="price-menu-hint">Tap any service to enquire &amp; book on WhatsApp</p>
+    </div>
+
+    <!-- Branch picker: choose which branch's WhatsApp number price-row taps go to -->
+    <div class="branch-picker" id="branchPicker" role="group" aria-label="Choose your branch">
+      <span class="branch-picker-label">Your branch:</span>
+      <button type="button" class="branch-picker-btn active" data-location="Changanassery">Changanassery</button>
+      <button type="button" class="branch-picker-btn" data-location="Kottayam">Kottayam</button>
     </div>
 
     <div class="price-menu" id="priceMenu">
@@ -305,6 +341,343 @@
           <div class="price-row" data-service="Special Bleach Offer — Oliva Bleach" data-price="₹100/-">
             <span class="price-row-name">Special Bleach Offer — Oliva Bleach</span>
             <span class="price-row-amount">100/-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Hair Cut (Gents)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Kids Hair Cut (Below 15 Years)" data-price="₹149/-"><span class="price-row-name">Kids (Below 15 Years)</span><span class="price-row-amount">149/-</span></div>
+          <div class="price-row" data-service="Beard Trim/Shave" data-price="₹149/-"><span class="price-row-name">Beard Trim/Shave</span><span class="price-row-amount">149/-</span></div>
+          <div class="price-row" data-service="Beard Design" data-price="₹149/-"><span class="price-row-name">Beard Design</span><span class="price-row-amount">149/-</span></div>
+          <div class="price-row" data-service="Hair Cut (Gents)" data-price="₹199/-"><span class="price-row-name">Hair Cut</span><span class="price-row-amount">199/-</span></div>
+          <div class="price-row" data-service="Advanced Hair Cut (Gents)" data-price="₹299/-"><span class="price-row-name">Advanced Hair Cut</span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Wash &amp; Style (Gents)" data-price="₹299/-"><span class="price-row-name">Wash &amp; Style</span><span class="price-row-amount">299/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Hair Cut (Ladies)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Basic Hair Cut (Ladies)" data-price="₹349/-"><span class="price-row-name">Basic Hair Cut</span><span class="price-row-amount">349/-</span></div>
+          <div class="price-row" data-service="Basic Layer Cut" data-price="₹749/-"><span class="price-row-name">Basic Layer Cut</span><span class="price-row-amount">749/-</span></div>
+          <div class="price-row" data-service="Advanced Layer Cut" data-price="₹849/-"><span class="price-row-name">Advanced Layer Cut</span><span class="price-row-amount">849/-</span></div>
+          <div class="price-row" data-service="Amigos Creative Cut" data-price="₹899/-"><span class="price-row-name">Amigos Creative Cut</span><span class="price-row-amount">899/-</span></div>
+          <div class="price-row" data-service="Butterfly Layer Cut" data-price="₹899/-"><span class="price-row-name">Butterfly Layer Cut</span><span class="price-row-amount">899/-</span></div>
+          <div class="price-row" data-service="Change of Style" data-price="₹999+/-"><span class="price-row-name">Change of Style</span><span class="price-row-amount">999+/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Hair Do</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Hair Wash" data-price="₹299/-"><span class="price-row-name">Hair Wash</span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Up Dos" data-price="₹699/-"><span class="price-row-name">Up Dos</span><span class="price-row-amount">699/-</span></div>
+          <div class="price-row" data-service="Straight Fashion Ironing" data-price="₹949/-"><span class="price-row-name">Straight Fashion Ironing</span><span class="price-row-amount">949/-</span></div>
+          <div class="price-row" data-service="Blow Dry" data-price="₹999/-"><span class="price-row-name">Blow Dry</span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Hair Setting (Gents)" data-price="₹999/-"><span class="price-row-name">Hair Setting <em>(gents)</em></span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Hair Setting (Ladies)" data-price="₹1499/-"><span class="price-row-name">Hair Setting <em>(ladies)</em></span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Advanced Blow Dry" data-price="₹1499/-"><span class="price-row-name">Advanced Blow Dry</span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Washing + Ironing" data-price="₹1499/-"><span class="price-row-name">Washing + Ironing</span><span class="price-row-amount">1499/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Coloring (Gents)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Low/Highlight — Per Streaks (Gents)" data-price="₹249/-"><span class="price-row-name">Low/Highlight <em>(per streaks)</em></span><span class="price-row-amount">249/-</span></div>
+          <div class="price-row" data-service="Low/Highlight — 15 Streaks (Gents)" data-price="₹2499/-"><span class="price-row-name">Low/Highlight <em>(15 streaks)</em></span><span class="price-row-amount">2499/-</span></div>
+          <div class="price-row" data-service="Henna (Gents)" data-price="₹649/-"><span class="price-row-name">Henna</span><span class="price-row-amount">649/-</span></div>
+          <div class="price-row" data-service="Ammonia Colour (Gents)" data-price="₹799/-"><span class="price-row-name">Ammonia</span><span class="price-row-amount">799/-</span></div>
+          <div class="price-row" data-service="Global Hair Colour (Gents)" data-price="₹1199/-"><span class="price-row-name">Global Hair Colour</span><span class="price-row-amount">1199/-</span></div>
+          <div class="price-row" data-service="Loreal Hair Colour (Gents)" data-price="₹849/-"><span class="price-row-name">Loreal Hair Colour</span><span class="price-row-amount">849/-</span></div>
+          <div class="price-row" data-service="Metrix Hair Colour (Gents)" data-price="₹799/-"><span class="price-row-name">Metrix Hair Colour</span><span class="price-row-amount">799/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Coloring (Ladies)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Blonde Colouring — Per Streaks (Ladies)" data-price="₹299/-"><span class="price-row-name">Blonde Colouring <em>(per streaks)</em></span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Root Touch — Grey Coverage (Ladies)" data-price="₹1499/-"><span class="price-row-name">Root Touch <em>(grey coverage)</em></span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Ammonia Free — Grey Coverage (Ladies)" data-price="₹1799+/-"><span class="price-row-name">Ammonia Free <em>(grey coverage)</em></span><span class="price-row-amount">1799+/-</span></div>
+          <div class="price-row" data-service="Global Colouring (Ladies)" data-price="₹1799+/-"><span class="price-row-name">Global Colouring</span><span class="price-row-amount">1799+/-</span></div>
+          <div class="price-row" data-service="Global Fashion Colouring (Ladies)" data-price="₹1999/-"><span class="price-row-name">Global Fashion Colouring</span><span class="price-row-amount">1999/-</span></div>
+          <div class="price-row" data-service="Ombre Colouring (Ladies)" data-price="₹3999+/-"><span class="price-row-name">Ombre Colouring</span><span class="price-row-amount">3999+/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Hair Spa (Gents)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Normal Hair Spa (Gents)" data-price="₹749/-"><span class="price-row-name">Normal Hair Spa</span><span class="price-row-amount">749/-</span></div>
+          <div class="price-row" data-service="Dandruff Spa — Matrix (Gents)" data-price="₹849/-"><span class="price-row-name">Dandruff Spa <em>(Matrix)</em></span><span class="price-row-amount">849/-</span></div>
+          <div class="price-row" data-service="Dandruff Spa — Loreal (Gents)" data-price="₹999/-"><span class="price-row-name">Dandruff Spa <em>(Loreal)</em></span><span class="price-row-amount">999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Hair Spa (Ladies)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Normal Hair Spa (Ladies)" data-price="₹999/-"><span class="price-row-name">Normal Hair Spa</span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Dandruff Spa — Matrix (Ladies)" data-price="₹1199/-"><span class="price-row-name">Dandruff Spa <em>(Matrix)</em></span><span class="price-row-amount">1199/-</span></div>
+          <div class="price-row" data-service="Dandruff Spa — Loreal (Ladies)" data-price="₹1399/-"><span class="price-row-name">Dandruff Spa <em>(Loreal)</em></span><span class="price-row-amount">1399/-</span></div>
+          <div class="price-row" data-service="Dandruff Spa — Wella (Ladies)" data-price="₹1499/-"><span class="price-row-name">Dandruff Spa <em>(Wella)</em></span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Hair Fall Spa — Matrix (Ladies)" data-price="₹999/-"><span class="price-row-name">Hair Fall Spa <em>(Matrix)</em></span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Hair Fall Spa — Loreal (Ladies)" data-price="₹1199/-"><span class="price-row-name">Hair Fall Spa <em>(Loreal)</em></span><span class="price-row-amount">1199/-</span></div>
+          <div class="price-row" data-service="Repair Treatment — Loreal (Ladies)" data-price="₹1299/-"><span class="price-row-name">Repair Treatment <em>(Loreal)</em></span><span class="price-row-amount">1299/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Hair Treatments</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Hair Extension (1 Gram)" data-price="₹249+/-"><span class="price-row-name">Hair Extension <em>(1 gram)</em></span><span class="price-row-amount">249+/-</span></div>
+          <div class="price-row" data-service="Smoothening" data-price="₹4499+/-"><span class="price-row-name">Smoothening</span><span class="price-row-amount">4499+/-</span></div>
+          <div class="price-row" data-service="Keratine Treatment" data-price="₹4999+/-"><span class="price-row-name">Keratine Treatment</span><span class="price-row-amount">4999+/-</span></div>
+          <div class="price-row" data-service="Silk Treatment" data-price="₹4999+/-"><span class="price-row-name">Silk Treatment</span><span class="price-row-amount">4999+/-</span></div>
+          <div class="price-row" data-service="Permanent Blow Dry" data-price="₹4999+/-"><span class="price-row-name">Permanent Blow Dry</span><span class="price-row-amount">4999+/-</span></div>
+          <div class="price-row" data-service="Hair Perming" data-price="₹4999+/-"><span class="price-row-name">Hair Perming</span><span class="price-row-amount">4999+/-</span></div>
+          <div class="price-row" data-service="Botox (Hair)" data-price="₹5999+/-"><span class="price-row-name">Botox</span><span class="price-row-amount">5999+/-</span></div>
+          <div class="price-row" data-service="Nanoplastia" data-price="₹6999+/-"><span class="price-row-name">Nanoplastia</span><span class="price-row-amount">6999+/-</span></div>
+          <div class="price-row" data-service="Fizzy Control Treatment Spa" data-price="₹1499/-"><span class="price-row-name">Fizzy Control Treatment Spa</span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Silk Hair Spa" data-price="₹1999/-"><span class="price-row-name">Silk Hair Spa</span><span class="price-row-amount">1999/-</span></div>
+          <div class="price-row" data-service="Hair Growth Spa" data-price="₹1399/-"><span class="price-row-name">Hair Growth Spa</span><span class="price-row-amount">1399/-</span></div>
+          <div class="price-row" data-service="Keratine Hair Spa" data-price="₹2699/-"><span class="price-row-name">Keratine Hair Spa</span><span class="price-row-amount">2699/-</span></div>
+          <div class="price-row" data-service="Moisturizing Hair Spa" data-price="₹1399/-"><span class="price-row-name">Moisturizing Hair Spa</span><span class="price-row-amount">1399/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Threading</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Threading — Forehead" data-price="₹29/-"><span class="price-row-name">Forehead</span><span class="price-row-amount">29/-</span></div>
+          <div class="price-row" data-service="Threading — Upper Lip" data-price="₹29/-"><span class="price-row-name">Upper Lip</span><span class="price-row-amount">29/-</span></div>
+          <div class="price-row" data-service="Threading — Chin" data-price="₹29/-"><span class="price-row-name">Chin</span><span class="price-row-amount">29/-</span></div>
+          <div class="price-row" data-service="Threading — Cheeks" data-price="₹49/-"><span class="price-row-name">Cheeks</span><span class="price-row-amount">49/-</span></div>
+          <div class="price-row" data-service="Threading — Eyebrow" data-price="₹49/-"><span class="price-row-name">Threading <em>(eyebrow)</em></span><span class="price-row-amount">49/-</span></div>
+          <div class="price-row" data-service="Threading — Full Face" data-price="₹249/-"><span class="price-row-name">Full Face</span><span class="price-row-amount">249/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Body Spa <em style="font-weight:400;font-size:11px;">(all services 1 hour)</em></h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Aroma Spa" data-price="₹2999/-"><span class="price-row-name">Aroma Spa</span><span class="price-row-amount">2999/-</span></div>
+          <div class="price-row" data-service="Full Body Polish Spa" data-price="₹4999/-"><span class="price-row-name">Full Body Polish Spa</span><span class="price-row-amount">4999/-</span></div>
+          <div class="price-row" data-service="Full Body Steam Polish Spa" data-price="₹6999/-"><span class="price-row-name">Full Body Steam Polish Spa</span><span class="price-row-amount">6999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Herbal Oil Massage <em style="font-weight:400;font-size:11px;">(all services 1 hour)</em></h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Herbal Oil Massage — Normal" data-price="₹2999/-"><span class="price-row-name">Normal Massage</span><span class="price-row-amount">2999/-</span></div>
+          <div class="price-row" data-service="Herbal Oil Massage — Aroma" data-price="₹3499/-"><span class="price-row-name">Aroma Massage</span><span class="price-row-amount">3499/-</span></div>
+          <div class="price-row" data-service="Herbal Oil Massage — Relax with Steam" data-price="₹3999/-"><span class="price-row-name">Relax Massage with Steam</span><span class="price-row-amount">3999/-</span></div>
+          <div class="price-row" data-service="Moroccan Bath" data-price="₹3499/-"><span class="price-row-name">Moroccan Bath</span><span class="price-row-amount">3499/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Head Massage <em style="font-weight:400;font-size:11px;">(all services 20 min)</em></h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Head Massage — Normal" data-price="₹449/-"><span class="price-row-name">Normal Massage</span><span class="price-row-amount">449/-</span></div>
+          <div class="price-row" data-service="Head Massage — Olive" data-price="₹549/-"><span class="price-row-name">Olive Massage</span><span class="price-row-amount">549/-</span></div>
+          <div class="price-row" data-service="Head Massage — Almond" data-price="₹649/-"><span class="price-row-name">Almond Massage</span><span class="price-row-amount">649/-</span></div>
+          <div class="price-row" data-service="Head Massage — Fresh Alovera (Organic)" data-price="₹749/-"><span class="price-row-name">Fresh Alovera Massage <em>(organic)</em></span><span class="price-row-amount">749/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Waxing</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Waxing — Under Arms (Honey)" data-price="₹199/-"><span class="price-row-name">Under Arms <em>(honey)</em></span><span class="price-row-amount">199/-</span></div>
+          <div class="price-row" data-service="Waxing — Under Arms (Rica)" data-price="₹299/-"><span class="price-row-name">Under Arms <em>(rica)</em></span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Waxing — Half (Honey)" data-price="₹349/-"><span class="price-row-name">Half <em>(honey)</em></span><span class="price-row-amount">349/-</span></div>
+          <div class="price-row" data-service="Waxing — Half (Rica)" data-price="₹549/-"><span class="price-row-name">Half <em>(rica)</em></span><span class="price-row-amount">549/-</span></div>
+          <div class="price-row" data-service="Waxing — Chest (Honey)" data-price="₹349/-"><span class="price-row-name">Chest <em>(honey)</em></span><span class="price-row-amount">349/-</span></div>
+          <div class="price-row" data-service="Waxing — Chest (Rica)" data-price="₹449/-"><span class="price-row-name">Chest <em>(rica)</em></span><span class="price-row-amount">449/-</span></div>
+          <div class="price-row" data-service="Waxing — Half Leg (Honey)" data-price="₹699/-"><span class="price-row-name">Half Leg <em>(honey)</em></span><span class="price-row-amount">699/-</span></div>
+          <div class="price-row" data-service="Waxing — Half Leg (Rica)" data-price="₹799/-"><span class="price-row-name">Half Leg <em>(rica)</em></span><span class="price-row-amount">799/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Leg (Honey)" data-price="₹1399/-"><span class="price-row-name">Full Leg <em>(honey)</em></span><span class="price-row-amount">1399/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Leg (Rica)" data-price="₹1599/-"><span class="price-row-name">Full Leg <em>(rica)</em></span><span class="price-row-amount">1599/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Arms (Honey)" data-price="₹799/-"><span class="price-row-name">Full Arms <em>(honey)</em></span><span class="price-row-amount">799/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Arms (Rica)" data-price="₹949/-"><span class="price-row-name">Full Arms <em>(rica)</em></span><span class="price-row-amount">949/-</span></div>
+          <div class="price-row" data-service="Waxing — Bikini (Honey)" data-price="₹1999/-"><span class="price-row-name">Bikini <em>(honey)</em></span><span class="price-row-amount">1999/-</span></div>
+          <div class="price-row" data-service="Waxing — Bikini (Rica)" data-price="₹2499/-"><span class="price-row-name">Bikini <em>(rica)</em></span><span class="price-row-amount">2499/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Body (Honey)" data-price="₹3999/-"><span class="price-row-name">Full Body <em>(honey)</em></span><span class="price-row-amount">3999/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Body (Rica)" data-price="₹4999/-"><span class="price-row-name">Full Body <em>(rica)</em></span><span class="price-row-amount">4999/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Face (Honey)" data-price="₹499/-"><span class="price-row-name">Full Face <em>(honey)</em></span><span class="price-row-amount">499/-</span></div>
+          <div class="price-row" data-service="Waxing — Full Face (Rica)" data-price="₹599/-"><span class="price-row-name">Full Face <em>(rica)</em></span><span class="price-row-amount">599/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Nail Extension</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Normal Gel Polish" data-price="₹1499/-"><span class="price-row-name">Normal Gel Polish</span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Gel Polish with Nail Extension" data-price="₹1999/-"><span class="price-row-name">Gel Polish with Nail Extension</span><span class="price-row-amount">1999/-</span></div>
+          <div class="price-row" data-service="Acrylic Nails Extension" data-price="₹2999/-"><span class="price-row-name">Acrylic Nails Extension</span><span class="price-row-amount">2999/-</span></div>
+          <div class="price-row" data-service="Polygel Nail Extension" data-price="₹3499/-"><span class="price-row-name">Polygel Nail Extension</span><span class="price-row-amount">3499/-</span></div>
+          <div class="price-row" data-service="Cat Eye Gel" data-price="₹3999/-"><span class="price-row-name">Cat Eye Gel</span><span class="price-row-amount">3999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Bleach <em style="font-weight:400;font-size:11px;">(face &amp; body)</em></h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Olive Bleach (Full Menu)" data-price="₹189/-"><span class="price-row-name">Olive Bleach</span><span class="price-row-amount">189/-</span></div>
+          <div class="price-row" data-service="Lacto Bleach" data-price="₹239/-"><span class="price-row-name">Lacto Bleach</span><span class="price-row-amount">239/-</span></div>
+          <div class="price-row" data-service="Gold Bleach (Full Menu)" data-price="₹299/-"><span class="price-row-name">Gold Bleach</span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Protein Bleach (Full Menu)" data-price="₹349/-"><span class="price-row-name">Protein Bleach</span><span class="price-row-amount">349/-</span></div>
+          <div class="price-row" data-service="Oxy Bleach (Full Menu)" data-price="₹379/-"><span class="price-row-name">Oxy Bleach</span><span class="price-row-amount">379/-</span></div>
+          <div class="price-row" data-service="Bleach — Half Leg" data-price="₹449/-"><span class="price-row-name">Half Leg</span><span class="price-row-amount">449/-</span></div>
+          <div class="price-row" data-service="Bleach — Full Leg" data-price="₹999/-"><span class="price-row-name">Full Leg</span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Bleach — Half Arms" data-price="₹649/-"><span class="price-row-name">Half Arms</span><span class="price-row-amount">649/-</span></div>
+          <div class="price-row" data-service="Bleach — Full Arms" data-price="₹999/-"><span class="price-row-name">Full Arms</span><span class="price-row-amount">999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Facial <em style="font-weight:400;font-size:11px;">(full menu)</em></h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Normal Facial (Full Menu)" data-price="₹749/-"><span class="price-row-name">Normal Facial</span><span class="price-row-amount">749/-</span></div>
+          <div class="price-row" data-service="Mixed Fruits Facial" data-price="₹949/-"><span class="price-row-name">Mixed Fruits</span><span class="price-row-amount">949/-</span></div>
+          <div class="price-row" data-service="Natures Pappaya Facial" data-price="₹949/-"><span class="price-row-name">Natures Pappaya</span><span class="price-row-amount">949/-</span></div>
+          <div class="price-row" data-service="Orange Facial + Steam" data-price="₹1199/-"><span class="price-row-name">Orange Facial + Steam</span><span class="price-row-amount">1199/-</span></div>
+          <div class="price-row" data-service="VLCC Pappaya + Steam" data-price="₹1199/-"><span class="price-row-name">VLCC Pappaya + Steam</span><span class="price-row-amount">1199/-</span></div>
+          <div class="price-row" data-service="Pearl Facial" data-price="₹1399/-"><span class="price-row-name">Pearl Facial</span><span class="price-row-amount">1399/-</span></div>
+          <div class="price-row" data-service="Raga Gold Facial" data-price="₹1699/-"><span class="price-row-name">Raga Gold</span><span class="price-row-amount">1699/-</span></div>
+          <div class="price-row" data-service="VLCC Gold Facial" data-price="₹1799/-"><span class="price-row-name">VLCC Gold</span><span class="price-row-amount">1799/-</span></div>
+          <div class="price-row" data-service="Natures Gold Facial" data-price="₹1899/-"><span class="price-row-name">Natures Gold</span><span class="price-row-amount">1899/-</span></div>
+          <div class="price-row" data-service="O3+ Pigmentation Facial" data-price="₹2999/-"><span class="price-row-name">O3+ Pigmentation</span><span class="price-row-amount">2999/-</span></div>
+          <div class="price-row" data-service="De-Tan Facial (Full Menu)" data-price="₹2099/-"><span class="price-row-name">De-Tan Facial</span><span class="price-row-amount">2099/-</span></div>
+          <div class="price-row" data-service="Alpha Whitening Facial" data-price="₹2099/-"><span class="price-row-name">Alpha Whitening Facial</span><span class="price-row-amount">2099/-</span></div>
+          <div class="price-row" data-service="Skin Whitening Facial" data-price="₹2299/-"><span class="price-row-name">Skin Whitening Facial</span><span class="price-row-amount">2299/-</span></div>
+          <div class="price-row" data-service="Lacto Facial" data-price="₹2249/-"><span class="price-row-name">Lacto Facial</span><span class="price-row-amount">2249/-</span></div>
+          <div class="price-row" data-service="Diamond Facial + Steam" data-price="₹2299/-"><span class="price-row-name">Diamond Facial + Steam</span><span class="price-row-amount">2299/-</span></div>
+          <div class="price-row" data-service="Moroccan Facial + Steam" data-price="₹2399/-"><span class="price-row-name">Moroccan Facial + Steam</span><span class="price-row-amount">2399/-</span></div>
+          <div class="price-row" data-service="Bridal Glow Facial" data-price="₹2799/-"><span class="price-row-name">Bridal Glow</span><span class="price-row-amount">2799/-</span></div>
+          <div class="price-row" data-service="Vitamin C Facial" data-price="₹3199/-"><span class="price-row-name">Vitamin C Facial</span><span class="price-row-amount">3199/-</span></div>
+          <div class="price-row" data-service="Oxygen Facial" data-price="₹3299/-"><span class="price-row-name">Oxygen Facial</span><span class="price-row-amount">3299/-</span></div>
+          <div class="price-row" data-service="Bio Whitening Facial" data-price="₹3599/-"><span class="price-row-name">Bio Whitening Facial</span><span class="price-row-amount">3599/-</span></div>
+          <div class="price-row" data-service="O3+ Bridal + Serum Facial" data-price="₹4299/-"><span class="price-row-name">O3+ Bridal + Serum</span><span class="price-row-amount">4299/-</span></div>
+          <div class="price-row" data-service="Glutothione Facial" data-price="₹4899/-"><span class="price-row-name">Glutothione</span><span class="price-row-amount">4899/-</span></div>
+          <div class="price-row" data-service="O3+ Whitening Facial" data-price="₹3999/-"><span class="price-row-name">O3+ Whitening</span><span class="price-row-amount">3999/-</span></div>
+          <div class="price-row" data-service="Oil Control Facial (O3+)" data-price="₹2100/-"><span class="price-row-name">Oil Control <em>(O3+)</em></span><span class="price-row-amount">2100/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Pedicure</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Normal Pedicure" data-price="₹999/-"><span class="price-row-name">Normal Pedicure</span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Foot Massage" data-price="₹799/-"><span class="price-row-name">Foot Massage</span><span class="price-row-amount">799/-</span></div>
+          <div class="price-row" data-service="Paraffine Pedicure" data-price="₹1299/-"><span class="price-row-name">Paraffine Pedicure</span><span class="price-row-amount">1299/-</span></div>
+          <div class="price-row" data-service="Spa Pedicure" data-price="₹1788/-"><span class="price-row-name">Spa Pedicure</span><span class="price-row-amount">1788/-</span></div>
+          <div class="price-row" data-service="French Pedicure" data-price="₹1999/-"><span class="price-row-name">French Pedicure</span><span class="price-row-amount">1999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Manicure</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Nail Point" data-price="₹199/-"><span class="price-row-name">Nail Point</span><span class="price-row-amount">199/-</span></div>
+          <div class="price-row" data-service="Normal Manicure" data-price="₹849/-"><span class="price-row-name">Normal Manicure</span><span class="price-row-amount">849/-</span></div>
+          <div class="price-row" data-service="Paraffine Manicure" data-price="₹999/-"><span class="price-row-name">Paraffine Manicure</span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Spa Manicure" data-price="₹1299/-"><span class="price-row-name">Spa Manicure</span><span class="price-row-amount">1299/-</span></div>
+          <div class="price-row" data-service="Ice Cream Manicure" data-price="₹1899/-"><span class="price-row-name">Ice Cream Manicure</span><span class="price-row-amount">1899/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Other Services</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Nose Piercing" data-price="₹299/-"><span class="price-row-name">Nose Piercing</span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Ear Piercing" data-price="₹299/-"><span class="price-row-name">Ear Piercing</span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Tattoo (per Inch)" data-price="₹599/-"><span class="price-row-name">Tattoo <em>(per inch)</em></span><span class="price-row-amount">599/-</span></div>
+          <div class="price-row" data-service="Mole Tattoo" data-price="₹299/-"><span class="price-row-name">Mole Tattoo</span><span class="price-row-amount">299/-</span></div>
+          <div class="price-row" data-service="Warts Removing (per Side)" data-price="₹1149/-"><span class="price-row-name">Warts Removing <em>(per side)</em></span><span class="price-row-amount">1149/-</span></div>
+          <div class="price-row" data-service="Micro Blading" data-price="₹2999+/-"><span class="price-row-name">Micro Blading</span><span class="price-row-amount">2999+/-</span></div>
+          <div class="price-row" data-service="Lice and Nits Treatment" data-price="₹2999+/-"><span class="price-row-name">Lice and Nits Treatment</span><span class="price-row-amount">2999+/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Bridal Make-Up (MAC)</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="HD Make-Up" data-price="₹15999/-"><span class="price-row-name">HD Make-Up</span><span class="price-row-amount">15999/-</span></div>
+          <div class="price-row" data-service="Ultra HD Make-Up" data-price="₹17999/-"><span class="price-row-name">Ultra HD Make-Up</span><span class="price-row-amount">17999/-</span></div>
+          <div class="price-row" data-service="Air Brush Make-Up" data-price="₹19999/-"><span class="price-row-name">Air Brush Make-Up</span><span class="price-row-amount">19999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Bridal Services</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Saree Draping" data-price="₹999/-"><span class="price-row-name">Saree Draping</span><span class="price-row-amount">999/-</span></div>
+          <div class="price-row" data-service="Bridal Hair Style" data-price="₹1499/-"><span class="price-row-name">Hair Style</span><span class="price-row-amount">1499/-</span></div>
+          <div class="price-row" data-service="Light Make-Up" data-price="₹3999/-"><span class="price-row-name">Light Make-Up</span><span class="price-row-amount">3999/-</span></div>
+          <div class="price-row" data-service="Party Make-Up" data-price="₹5999/-"><span class="price-row-name">Party Make-Up</span><span class="price-row-amount">5999/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category">
+        <h4 class="price-category-title">Groom</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Groom Indoor Make-Up" data-price="₹4999/-"><span class="price-row-name">Indoor Make-Up</span><span class="price-row-amount">4999/-</span></div>
+          <div class="price-row" data-service="Groom Outdoor Make-Up" data-price="₹6999+/-"><span class="price-row-name">Outdoor Make-Up</span><span class="price-row-amount">6999+/-</span></div>
+        </div>
+      </div>
+
+      <div class="price-category price-category-festive">
+        <h4 class="price-category-title">Groom Packages</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Groom Package — Silver (HD Make-up, Hair Spa, Head &amp; Cream Massage, Steaming, Hair Setting, Facial, Pedicure, Leg Spa)" data-price="₹7500/-">
+            <span class="price-row-name">Silver Package <em>(HD make-up, hair spa, head &amp; cream massage, facial, pedicure, leg spa)</em></span>
+            <span class="price-row-amount">7500/-</span>
+          </div>
+          <div class="price-row" data-service="Groom Package — Gold (HD Make-up, Hair Spa, Head &amp; Cream Massage, Steaming, Hair Setting, Facial, Pedicure, Leg Spa)" data-price="₹9000/-">
+            <span class="price-row-name">Gold Package <em>(HD make-up, hair spa, head &amp; cream massage, facial, pedicure, leg spa)</em></span>
+            <span class="price-row-amount">9000/-</span>
+          </div>
+          <div class="price-row" data-service="Groom Package — Diamond (Glass Skin Make-up, Hair Spa, Head &amp; Cream Massage, Facial, Pedicure, Leg Spa, Beard Cutting/Shaping/Setting)" data-price="₹10000/-">
+            <span class="price-row-name">Diamond Package <em>(glass skin make-up, hair spa, facial, pedicure, leg spa, beard cutting/shaping/setting)</em></span>
+            <span class="price-row-amount">10000/-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-category price-category-festive">
+        <h4 class="price-category-title">Bridal Package</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Bridal Package — Platinum (HD Make-up, Glass Skin, Threading, Full Body Spa, Manicure, Pedicure, O3+/Hydra Facial, Hair Spa &amp; Setting, Lens &amp; Eyelash Compliments)" data-price="₹34000/-">
+            <span class="price-row-name">Platinum Package <em>(HD make-up, glass skin, threading, full body spa, manicure, pedicure, O3+/hydra facial, hair spa &amp; setting — includes lens &amp; eyelash)</em></span>
+            <span class="price-row-amount">34000/-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-category price-category-festive">
+        <h4 class="price-category-title">Pre-Wedding Packages</h4>
+        <div class="price-list">
+          <div class="price-row" data-service="Pre-Wedding Package — Silver (Facial, Bleach, Pedicure, Manicure, Full Arms Spa)" data-price="₹4999/-">
+            <span class="price-row-name">Silver Package <em>(facial, bleach, pedicure, manicure, full arms spa)</em></span>
+            <span class="price-row-amount">4999/-</span>
+          </div>
+          <div class="price-row" data-service="Pre-Wedding Package — Gold (Facial, Bleach, Spa Pedicure, Manicure, Threading, Spa, Full Arms &amp; Body Wax)" data-price="₹9600/-">
+            <span class="price-row-name">Gold Package <em>(facial, bleach, spa pedicure, manicure, threading, spa, full arms &amp; body wax)</em></span>
+            <span class="price-row-amount">9600/-</span>
+          </div>
+          <div class="price-row" data-service="Pre-Wedding Package — Diamond (Facial, Bleach, Spa Pedicure, Manicure, Threading, Full Body Spa with Wax, Scrub, Oil Massage)" data-price="₹9600/-">
+            <span class="price-row-name">Diamond Package <em>(facial, bleach, spa pedicure, manicure, threading, full body spa — wax, scrub, oil massage)</em></span>
+            <span class="price-row-amount">9600/-</span>
+          </div>
+          <div class="price-row" data-service="Pre-Wedding Package — Platinum (Facial, Bleach, Threading, Pedicure, Manicure, Full Body Spa — cleansing, bleach, waxing, scrub, oil &amp; cream massage)" data-price="₹18499/-">
+            <span class="price-row-name">Platinum Package <em>(facial, bleach, threading, pedicure, manicure, full body spa — cleansing, waxing, scrub, oil &amp; cream massage)</em></span>
+            <span class="price-row-amount">18499/-</span>
           </div>
         </div>
       </div>
@@ -551,6 +924,7 @@
 
   </div>
 </div>
+  </div>
 </section>
 
 <section id="contact" class="section-anchor page-section">

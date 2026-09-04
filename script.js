@@ -228,7 +228,22 @@
     });
   }
 
-  // --- 4b. Price menu rows -> tapping a service opens WhatsApp with that service filled in ---
+  // --- 4b. Branch picker: choose which branch's WhatsApp number price-row taps go to ---
+  const branchPicker = document.getElementById('branchPicker');
+  let selectedLocation = 'Changanassery'; // default branch
+
+  if (branchPicker) {
+    branchPicker.querySelectorAll('.branch-picker-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        selectedLocation = this.dataset.location;
+        branchPicker.querySelectorAll('.branch-picker-btn').forEach(b => {
+          b.classList.toggle('active', b === this);
+        });
+      });
+    });
+  }
+
+  // --- 4c. Price menu rows -> tapping a service opens WhatsApp (selected branch) with that service filled in ---
   priceRows.forEach(row => {
     row.setAttribute('role', 'button');
     row.setAttribute('tabindex', '0');
@@ -236,7 +251,10 @@
     function enquire() {
       const service = row.dataset.service || row.querySelector('.price-row-name').textContent.trim();
       const price = row.dataset.price ? ` (${row.dataset.price})` : '';
-      openWhatsApp(`Hi Amigos! I'd like to enquire about *${service}*${price}.`);
+      openWhatsApp(
+        `Hi Amigos! I'd like to enquire about *${service}*${price} at the ${selectedLocation} branch.`,
+        getWhatsAppNumberForLocation(selectedLocation)
+      );
     }
 
     row.addEventListener('click', enquire);
@@ -248,7 +266,7 @@
     });
   });
 
-  // --- 4c. Enquiry form -> compiles details and sends via WhatsApp ---
+  // --- 4d. Enquiry form -> compiles details and sends via WhatsApp ---
   if (enquiryForm) {
     // Live-validate the time as the person picks it, so they get instant feedback
     if (enquiryTimeInput) {
@@ -321,26 +339,11 @@
     sections.forEach(section => observer.observe(section));
   }
 
-  // --- 5b. Scroll-reveal: fade + rise each section in the first time it's scrolled into view ---
-  const prefersReducedMotionGlobal = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if ('IntersectionObserver' in window && sections.length && !prefersReducedMotionGlobal) {
-    sections.forEach(section => section.classList.add('scroll-reveal'));
-
-    const revealObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px 0px -10% 0px',
-      threshold: 0.1
-    });
-
-    sections.forEach(section => revealObserver.observe(section));
-  }
+  // --- 5b. Scroll-reveal removed: it relied on an IntersectionObserver that
+  // could fail to fire on some browsers/devices, leaving sections (like the
+  // long Services price menu) permanently hidden with no fallback. Sections
+  // now render normally; the nav-click fade (playSectionAnimation) still
+  // provides a lightweight animated touch when jumping between sections.
 
   // --- 6. Handle direct links / reloads with a hash in the URL ---
   window.addEventListener('load', function() {

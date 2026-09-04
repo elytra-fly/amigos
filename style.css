@@ -155,18 +155,11 @@ nav a:hover {
   scroll-margin-top: 96px;
 }
 
-/* Fade-in reveal played the first time a section scrolls into view */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.scroll-reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* Scroll-triggered fade-in was removed: on some browsers/devices the
+   IntersectionObserver that revealed these sections could fail to fire,
+   leaving whole sections permanently invisible (opacity: 0) with no
+   fallback. Content now renders normally and immediately; only the
+   nav-click fade (.nav-animate below) remains as a cosmetic touch. */
 
 /* Reveal animation played when a nav/CTA button jumps to a section */
 @keyframes navReveal {
@@ -516,6 +509,48 @@ h2.headline .grad-purple {
   font-size: 12.5px;
   font-weight: 600;
   color: #0f9d6a;
+}
+
+/* Branch picker (choose which branch's WhatsApp number price-row taps use) */
+.branch-picker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.branch-picker-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #4a4a5c;
+  margin-right: 4px;
+}
+
+.branch-picker-btn {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #1a1a2e;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  border-radius: 999px;
+  padding: 9px 20px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: 0.15s;
+}
+
+.branch-picker-btn:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.branch-picker-btn.active {
+  background: linear-gradient(135deg, #7c3aed, #a21caf);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
 }
 
 .price-menu {
